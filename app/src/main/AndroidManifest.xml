@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.bagunic">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--    <uses-permission android:name="android.permission.CAMERA" />-->
+
+    <application
+        android:name=".log.GlobalApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_bagunic"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_bagunic_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Bagunic"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".log.AgreeActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".log.AgreeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".notice.NoticeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".review.ReviewActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.bagunic.chat.Chat"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivityL"
+            android:exported="false" />
+
+        <activity
+            android:name=".CameraActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.example.bagunic.sellbagunic.PayActivity"
+            android:exported="false" />
+        <activity
+            android:name=".sellbagunic.RentalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".log.JoinActivity"
+            android:exported="false" />
+        <activity
+            android:name=".log.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".startfragment.SildeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MapActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Bagunic.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <!-- Redirect URI: "kakao{NATIVE_APP_KEY}://oauth" -->
+                <data
+                    android:host="oauth"
+                    android:scheme="kakao{cb0e5cbdd1de26a67c82df289641311e}" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="cb0e5cbdd1de26a67c82df289641311e" />
+    </application>
+
+</manifest>

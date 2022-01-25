@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">maps.daum-img.net</domain>
+        <domain includeSubdomains="true">210.183.87.46:8086/z_Happynic</domain>
+    </domain-config>
+</network-security-config>
